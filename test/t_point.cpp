@@ -11,7 +11,7 @@ TEST(t_point, add_operator) {
     auto pointC = pointA + pointB;
 
     EXPECT_EQ(pointC.x(), 4.0);
-    EXPECT_EQ(pointC.y(), 7.0);
+    EXPECT_EQ(pointC.y(), 6.0);
 }
 
 
