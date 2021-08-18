@@ -14,7 +14,11 @@ jobs:
       - run:
           name: Installing GCC
           command: 'apt-get update && apt-get install -y gcc g++'
-      
+     
+      - run:
+          name: Installing WGET and TAR
+          command: 'apt-get update && apt-get install -y wget tar
+
       - run:
           name: Install CMAKE
           #command: 'apt-get update && DEBIAN_FRONTEND=noninteractive sudo apt-get install -y cmake'
