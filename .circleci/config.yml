@@ -29,7 +29,7 @@ jobs:
 
       - run:
           name: Creating Build Files
-          command: 'cmake .'
+          command: 'cmake . && make'
       
       - run:
           name: Point Unit Testing
