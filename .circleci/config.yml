@@ -14,15 +14,20 @@ jobs:
       - run:
           name: Installing GCC and BUILDING-ESSENTIAL
           command: 'apt-get update && apt-get install -y gcc g++ build-essential'
-     
+
+            #      - run:
+          #          name: Installing WGET and TAR
+          #          command: 'apt-get update && apt-get install -y wget tar'
+
       - run:
-          name: Installing WGET and TAR
-          command: 'apt-get update && apt-get install -y wget tar'
+        name: Installing TZDATA
+        command: 'apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata'
+
 
       - run:
           name: Install CMAKE
-          #command: 'apt-get update && DEBIAN_FRONTEND=noninteractive sudo apt-get install -y cmake'
-          command: 'cd /tmp  &&  wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0.tar.gz  &&  tar -xzvf cmake-3.20.0.tar.gz       && cd cmake-3.20.0   &&  ./bootstrap   &&  make -j4  && make install'
+          command: 'apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y cmake'
+          #command: 'cd /tmp  &&  wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0.tar.gz  &&  tar -xzvf cmake-3.20.0.tar.gz       && cd cmake-3.20.0   &&  ./bootstrap   &&  make -j4  && make install'
 
       - run:
           name: Creating Build Files
