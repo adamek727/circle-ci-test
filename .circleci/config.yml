@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: "debian:focal"
+      - image: "ubuntu:focal"
 
     steps:
       - checkout
