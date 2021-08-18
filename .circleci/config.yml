@@ -17,7 +17,7 @@ jobs:
       
       - run:
           name: Install CMAKE
-          command: 'apt-get update && export DEBIAN_FRONTEND=noninteractive && sudo apt-get install -y cmake'
+          command: 'apt-get update && DEBIAN_FRONTEND=noninteractive sudo apt-get install -y cmake'
       
       - run:
           name: Creating Build Files
