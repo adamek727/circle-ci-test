@@ -33,4 +33,4 @@ jobs:
       
       - run:
           name: Point Unit Testing
-          command: 'ctest'
+          command: 'ctest .'
