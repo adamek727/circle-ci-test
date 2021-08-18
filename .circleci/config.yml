@@ -16,8 +16,8 @@ jobs:
           command: 'apt-get update && apt-get install -y gcc g++ build-essential'
 
       - run:
-          name: Installing TZDATA
-          command: 'apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata'
+          name: Installing TZDATA and CURL
+          command: 'apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata curl'
 
       - run:
           name: Install CMAKE
@@ -32,5 +32,5 @@ jobs:
           command: 'cmake . && make'
       
       - run:
-          name: Point Unit Testing
-          command: 'ctest .'
+          name: Tests
+          command: 'ctest . && bash <(curl -s https://codecov.io/bash)'
